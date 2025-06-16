@@ -46,19 +46,19 @@ const modlar = [
         const kartSesi = kartElemani.querySelector("audio");
   
         if (!kartSesi.paused) {
-          // Ses çalıyorsa durdur
+          
           kartSesi.pause();
           kartElemani.classList.remove("aktif");
   
-          // Çalan modlar listesinden kaldır
+          
           const modIndex = calanModlar.findIndex((elem) => elem === kartElemani.dataset.mod);
           calanModlar.splice(modIndex, 1);
         } else {
-          // Ses çalmıyorsa başlat
+          
           kartSesi.play();
           kartElemani.classList.add("aktif");
   
-          // Çalan modlara ekle
+          
           calanModlar.push(kartElemani.dataset.mod);
         }
   
